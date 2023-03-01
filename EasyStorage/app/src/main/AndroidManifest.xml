@@ -13,9 +13,17 @@
         android:theme="@style/Theme.EasyStorage"
         tools:targetApi="31">
         <activity
+            android:name=".HowItWorks"
+            android:exported="false"
+            android:parentActivityName=".KnowAboutEasyStorage">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".KnowAboutEasyStorage"
             android:exported="false"
-            android:parentActivityName=".MainActivity">  <!--Parent Activity Set-->
+            android:parentActivityName=".MainActivity"> <!-- Parent Activity Set -->
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

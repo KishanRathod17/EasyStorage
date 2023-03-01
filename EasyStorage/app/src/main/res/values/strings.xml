@@ -2,6 +2,7 @@
     <string name="app_name">Easy Storage</string>
 
     <string name="title">Easy Storage</string>
+    <string name="main_logo">Main Logo</string>
 
     <!--Initial Page-->
     <string name="know_about_easyStorage">Know About Easy Storage</string>
@@ -11,9 +12,18 @@
     <string name="what_easy_storage_answer">•Safe Storage is a self-storage facility that provides extra storage space for individuals and businesses across India.
     \n•They offer a range of self-storage options, including household storage units and furniture storage units.
     \n•Safe Storage helps customers store their belongings securely during relocation, renovation, or any other time they need additional space.
-    \n•Customers can use Safe Storage\'s self-storage space estimators to determine the perfect unit size for their needs.
     \n•Safe Storage provides packing and moving services to help customers transport their items to and from their self-storage units.
-    \n•Their website provides information on Safe Storage prices across India, making it easy for customers to find the best deal.
-    \n•Safe Storage is staffed by a team of experts who are available to help customers with any questions or concerns they may have.
     \n•Overall, Safe Storage provides a convenient and reliable solution for anyone who needs extra storage space in India.</string>
+    <string name="services">Our Services</string>
+    <string name="document">Document Storage</string>
+    <string name="document_info">Easy Storage provides records or documents management storage services for professional and small businesses for safe and secure business storage</string>
+    <string name="automobile">Automobile Storage</string>
+    <string name="automobile_info">Easy Storage gives 24x7 monitored automobile service, kept in a clean environment</string>
+    <string name="furniture">Furniture Storage</string>
+    <string name="furniture_info">We also provides storages for household furniture, kept with proper care</string>
+
+
+    <!--How It Works-->
+    <string name="how_it_works">How Easy Storage Works?</string>
+
 </resources>

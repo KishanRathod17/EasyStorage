@@ -22,7 +22,7 @@
         android:id="@+id/Logo"
         android:layout_width="58dp"
         android:layout_height="55dp"
-        android:contentDescription="Main Logo"
+        android:contentDescription="@string/main_logo"
         app:layout_constraintBottom_toBottomOf="@+id/easy_storage"
         app:layout_constraintEnd_toStartOf="@+id/easy_storage"
         app:srcCompat="@drawable/logo" />
@@ -40,27 +40,143 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/easy_storage" />
 
-    <AutoCompleteTextView
+    <TextView
         android:id="@+id/WhatAnswer"
-        android:layout_width="341dp"
-        android:layout_height="475dp"
-        android:layout_marginEnd="43dp"
-        android:accessibilityLiveRegion="none"
+        android:layout_width="386dp"
+        android:layout_height="218dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/what_easy_storage_answer"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/WhatIsEasyStorage"
         app:layout_constraintTop_toBottomOf="@+id/WhatIsEasyStorage" />
 
+    <TextView
+        android:id="@+id/services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="293dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/services"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WhatAnswer" />
+
+    <TextView
+        android:id="@+id/Furniture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/furniture"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/furniture"
+        app:layout_constraintTop_toTopOf="@+id/furniture" />
+
+    <TextView
+        android:id="@+id/Documents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/document"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/document"
+        app:layout_constraintTop_toTopOf="@+id/document" />
+
+    <TextView
+        android:id="@+id/Automobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/automobile"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/car"
+        app:layout_constraintTop_toTopOf="@+id/car" />
+
+    <TextView
+        android:id="@+id/furniture_info"
+        android:layout_width="377dp"
+        android:layout_height="37dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/furniture_info"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/furniture"
+        app:layout_constraintTop_toBottomOf="@+id/Furniture" />
+
+    <TextView
+        android:id="@+id/document_info"
+        android:layout_width="366dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/document_info"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/document"
+        app:layout_constraintTop_toBottomOf="@+id/Documents" />
+
+    <TextView
+        android:id="@+id/automobile_info"
+        android:layout_width="381dp"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/automobile_info"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/car"
+        app:layout_constraintTop_toBottomOf="@+id/Automobile" />
+
     <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier3"
+        android:id="@+id/UpperBarrier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="easy_storage,Logo"
         tools:layout_editor_absoluteY="88dp" />
+
+    <ImageView
+        android:id="@+id/furniture"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/services"
+        app:srcCompat="@drawable/furniture" />
+
+    <ImageView
+        android:id="@+id/document"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/services"
+        app:srcCompat="@drawable/document" />
+
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/services"
+        app:srcCompat="@drawable/automobile" />
+
+    <Button
+        android:id="@+id/howitworks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="openActivityHowItWorks"
+        android:text="@string/how_it_works"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/automobile_info" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
