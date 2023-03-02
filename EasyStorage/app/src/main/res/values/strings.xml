@@ -6,6 +6,8 @@
 
     <!--Initial Page-->
     <string name="know_about_easyStorage">Know About Easy Storage</string>
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
 
     <!--Know About Easy Storage -->
     <string name="what_easy_storage" formatted="false">What is Easy Storage?</string>
@@ -25,5 +27,14 @@
 
     <!--How It Works-->
     <string name="how_it_works">How Easy Storage Works?</string>
+    <string name="one">01</string>
+    <string name="pack_at_home">We pack at your home</string>
+    <string name="two">02</string>
+    <string name="pick_at_doorstep">We pick up from your doorstep</string>
+    <string name="three">03</string>
+    <string name="store">We store at our warehouse</string>
+    <string name="four">04 </string>
+    <string name="deliver">We deliver when you need</string>
+    <string name="toMain">Go to Main Page</string>
 
 </resources>

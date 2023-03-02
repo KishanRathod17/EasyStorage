@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HowItWorks">
@@ -28,59 +29,179 @@
         app:layout_constraintEnd_toStartOf="@+id/easy_storage"
         app:srcCompat="@drawable/logo" />
 
+
     <TextView
         android:id="@+id/HowItWorks"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center|center_horizontal|center_vertical"
         android:text="@string/how_it_works"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easy_storage" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/HowItWorks">
+
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/one"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="01" />
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:text="@string/one"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/packimg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/package_back" />
+
+            <TextView
+                android:id="@+id/packtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/pack_at_home"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow1"
+                android:layout_width="27dp"
+                android:layout_height="77dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/downarrow" />
+
+            <TextView
+                android:id="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:text="@string/two"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/truck"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/truck" />
+
+            <TextView
+                android:id="@+id/pickuptxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/pick_at_doorstep"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow2"
+                android:layout_width="27dp"
+                android:layout_height="77dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/downarrow" />
+
+            <TextView
+                android:id="@+id/three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:text="@string/three"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/warehouseimg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/warehouse" />
+
+            <TextView
+                android:id="@+id/warehousetxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/store"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/arrow3"
+                android:layout_width="27dp"
+                android:layout_height="77dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="20dp"
+                app:srcCompat="@drawable/downarrow" />
+
+            <TextView
+                android:id="@+id/four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:text="@string/four"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/deliverimg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/resource_package"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/delivertxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal"
+                android:paddingBottom="40dp"
+                android:text="@string/deliver"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/toMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:onClick="goToMainPage"
+                android:text="@string/toMain" />
         </LinearLayout>
     </ScrollView>
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/LeftBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        app:constraint_referenced_ids="HowItWorks,scrollView2"
-        tools:layout_editor_absoluteX="411dp" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/RightBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        app:constraint_referenced_ids="HowItWorks,scrollView2"
-        tools:layout_editor_absoluteX="411dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
