@@ -37,4 +37,23 @@
     <string name="deliver">We deliver when you need</string>
     <string name="toMain">Go to Main Page</string>
 
+
+    <!--Register -->
+    <string name="user_name">Name : </string>
+    <string name="user_address">Address : </string>
+    <string name="user_email">Email : </string>
+    <string name="user_number">Mobile : </string>
+    <string name="user_password">Password : </string>
+    <string name="hint_enter_name">Enter your name</string>
+    <string name="hint_enter_address">Enter home address</string>
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="hint_enter_mobile">Enter mobile number</string>
+    <string name="hint_enter_password">Enter password</string>
+    <string name="submit">Submit</string>
+
+    <!--Check Register-->
+    <string name="makeChanges">Make Changes</string>
+
+
+
 </resources>

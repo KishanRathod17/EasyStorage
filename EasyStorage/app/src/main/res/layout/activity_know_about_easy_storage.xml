@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#64AAE3">
 
     <TextView
         android:id="@+id/easy_storage"
@@ -12,6 +13,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/title"
+        android:textColor="#0B0B0B"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.561"
@@ -34,6 +36,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/what_easy_storage"
+        android:textColor="#0B0B0B"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
@@ -46,6 +49,7 @@
         android:layout_height="218dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/what_easy_storage_answer"
+        android:textColor="#0B0B0B"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/WhatIsEasyStorage"
         app:layout_constraintTop_toBottomOf="@+id/WhatIsEasyStorage" />
@@ -59,6 +63,7 @@
         android:layout_marginEnd="293dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/services"
+        android:textColor="#0B0B0B"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -71,6 +76,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/furniture"
+        android:textColor="#0B0B0B"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/furniture"
         app:layout_constraintTop_toTopOf="@+id/furniture" />
@@ -81,6 +87,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/document"
+        android:textColor="#0B0B0B"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/document"
         app:layout_constraintTop_toTopOf="@+id/document" />
@@ -91,6 +98,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/automobile"
+        android:textColor="#0B0B0B"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/car"
         app:layout_constraintTop_toTopOf="@+id/car" />
@@ -101,6 +109,7 @@
         android:layout_height="37dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/furniture_info"
+        android:textColor="#0B0B0B"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/furniture"
         app:layout_constraintTop_toBottomOf="@+id/Furniture" />
@@ -112,6 +121,7 @@
         android:layout_marginEnd="36dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/document_info"
+        android:textColor="#0B0B0B"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -124,6 +134,7 @@
         android:layout_height="43dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/automobile_info"
+        android:textColor="#0B0B0B"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/car"
         app:layout_constraintTop_toBottomOf="@+id/Automobile" />
