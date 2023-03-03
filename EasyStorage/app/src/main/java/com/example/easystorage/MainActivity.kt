@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     fun openActivityKnowAboutEasyStorage(v: View)
     {
-        Toast.makeText(this,"You clicked know about EasyStorage",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"You'll get to know about EasyStorage",Toast.LENGTH_SHORT).show()
         val intent=Intent(this,KnowAboutEasyStorage::class.java)
         startActivity(intent)
     }
