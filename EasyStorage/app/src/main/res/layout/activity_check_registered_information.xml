@@ -39,10 +39,8 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/head_name"
         app:layout_constraintStart_toEndOf="@+id/head_name"
-        app:layout_constraintTop_toTopOf="@+id/head_name"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/head_name" />
 
 
     <TextView
@@ -89,10 +87,8 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/head_email"
         app:layout_constraintStart_toEndOf="@+id/head_email"
-        app:layout_constraintTop_toTopOf="@+id/head_email"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/head_email" />
 
     <TextView
         android:id="@+id/head_mobile"
@@ -113,7 +109,6 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/head_mobile"
         app:layout_constraintStart_toEndOf="@+id/head_mobile"
         app:layout_constraintTop_toTopOf="@+id/head_mobile" />
 
@@ -154,9 +149,7 @@
         android:maxLines="5"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/head_address"
         app:layout_constraintStart_toEndOf="@+id/head_address"
-        app:layout_constraintTop_toTopOf="@+id/head_address"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/head_address" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

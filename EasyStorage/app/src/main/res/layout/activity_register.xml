@@ -189,7 +189,7 @@
         android:layout_marginStart="153dp"
         android:layout_marginEnd="168dp"
         android:layout_marginBottom="208dp"
-        android:onClick="goToMainPage"
+        android:onClick="goToCheckInfo"
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
