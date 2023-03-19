@@ -29,6 +29,7 @@ class CheckRegisteredInformation : AppCompatActivity() {
         val text_mobile = intent.getStringExtra("user_mobile")
         var p_mobile=findViewById<TextView>(R.id.previous_mobile)
         p_mobile.text=text_mobile
+
     }
 
     fun goToMainPage(v: View)

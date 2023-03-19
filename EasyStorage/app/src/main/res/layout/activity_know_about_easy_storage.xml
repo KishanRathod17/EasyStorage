@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/Logo"
-        android:layout_width="58dp"
-        android:layout_height="55dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:contentDescription="@string/main_logo"
         app:layout_constraintBottom_toBottomOf="@+id/easy_storage"
         app:layout_constraintEnd_toStartOf="@+id/easy_storage"
@@ -43,23 +43,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/easy_storage" />
 
-    <TextView
-        android:id="@+id/WhatAnswer"
-        android:layout_width="386dp"
-        android:layout_height="218dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/what_easy_storage_answer"
-        android:textColor="#0B0B0B"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/WhatIsEasyStorage"
-        app:layout_constraintTop_toBottomOf="@+id/WhatIsEasyStorage" />
+    <ScrollView
+            android:id="@+id/scroll1"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:layout_constraintStart_toStartOf="@+id/WhatIsEasyStorage"
+            app:layout_constraintTop_toBottomOf="@+id/WhatIsEasyStorage">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/WhatAnswer"
+                android:layout_width="386dp"
+                android:layout_height="218dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="20dp"
+                android:text="@string/what_easy_storage_answer"
+                android:textColor="#0B0B0B"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
 
     <TextView
         android:id="@+id/services"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="293dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/services"
@@ -68,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WhatAnswer" />
+        app:layout_constraintTop_toBottomOf="@+id/scroll1" />
 
     <TextView
         android:id="@+id/Furniture"
