@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#64AAE3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/easy_storage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/title"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/main_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/easy_storage"
+        app:layout_constraintEnd_toStartOf="@+id/easy_storage"
+        app:srcCompat="@drawable/logo" />
+
+    <Spinner
+        android:id="@+id/room_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/select_room_size"
+        app:layout_constraintTop_toBottomOf="@+id/select_room_size" />
+
+    <TextView
+        android:id="@+id/select_room_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/select_slot_size"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easy_storage" />
+
+    <TextView
+        android:id="@+id/info_room_price"
+        android:layout_width="47dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/room_size_price"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/room_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/room_spinner" />
+
+    <TextView
+        android:id="@+id/room_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/info_room_price"
+        app:layout_constraintStart_toEndOf="@+id/info_room_price"
+        app:layout_constraintTop_toTopOf="@+id/info_room_price"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <TextView
+        android:id="@+id/select_time_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/select_time_period"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/info_room_price"
+        app:layout_constraintTop_toBottomOf="@+id/info_room_price" />
+
+    <Spinner
+        android:id="@+id/months_or_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/select_time_period"
+        app:layout_constraintTop_toBottomOf="@+id/select_time_period" />
+
+    <TextView
+        android:id="@+id/enter_d_or_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/months_or_days"
+        app:layout_constraintTop_toBottomOf="@+id/months_or_days" />
+
+    <EditText
+        android:id="@+id/enter"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="Enter here"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/enter_d_or_m"
+        app:layout_constraintStart_toEndOf="@+id/enter_d_or_m"
+        app:layout_constraintTop_toTopOf="@+id/enter_d_or_m" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="121dp"
+        android:gravity="center|center_horizontal"
+        android:onClick="goToCalculateCost"
+        android:text="@string/calculate_cost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

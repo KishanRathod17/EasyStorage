@@ -12,11 +12,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyStorage"
         tools:targetApi="31">
-
+        <activity
+            android:name=".CalculateCost"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".StoreDocuments"
+            android:exported="false"
+            android:parentActivityName=".Homescreen">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".StoreAutomobile"
+            android:exported="false"
+            android:parentActivityName=".Homescreen">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".StoreFurniture"
+            android:exported="false"
+            android:parentActivityName=".Homescreen">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Homescreen"
-            android:exported="false"
-            >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

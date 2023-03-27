@@ -19,4 +19,5 @@ class HowItWorks : AppCompatActivity() {
         startActivity(intent)
     }
 
+
 }

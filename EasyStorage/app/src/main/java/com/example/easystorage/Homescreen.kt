@@ -18,4 +18,23 @@ class Homescreen : AppCompatActivity() {
         val intent= Intent(this,MainActivity::class.java)
         startActivity(intent)
     }
+
+    fun goToStoreAutomobile(v: View)
+    {
+        val intent=Intent(this,StoreAutomobile::class.java)
+        startActivity(intent)
+    }
+
+    fun goToStoreDocuments(v: View)
+    {
+        val intent=Intent(this,StoreDocuments::class.java)
+        startActivity(intent)
+    }
+
+    fun goToStoreFurniture(v: View)
+    {
+        val intent=Intent(this,StoreFurniture::class.java)
+        startActivity(intent)
+    }
+
 }

@@ -66,4 +66,19 @@
     <string name="logout">Log Out</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="view_order_history">View Order History</string>
+
+
+    <!--Furniture Storage-->
+    <string name="select_room_size">Select room size</string>
+    <string name="room_size_price">Price : </string>
+    <string name="select_time_period">Select time period</string>
+    <string name="calculate_cost">Calculate cost</string>
+
+
+    <!--Automobile Storage-->
+    <string name="select_slot_size">Select slot size</string>
+
+
+    <!--Document Storage-->
+    <string name="select_locker_size">Select locker size</string>
 </resources>
