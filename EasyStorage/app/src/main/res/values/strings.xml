@@ -54,6 +54,16 @@
     <!--Check Register-->
     <string name="makeChanges">Make Changes</string>
 
+    <!--Login Activity-->
+    <string name="login_button">Log In</string>
 
-
+    <!--Homescreen-->
+    <string name="store_furniture">Store Furniture</string>
+    <string name="store_automobile">Store Automobile</string>
+    <string name="store_documents">Store Documents</string>
+    <string name="create_order">Create Order</string>
+    <string name="order_history">Order History</string>
+    <string name="logout">Log Out</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="view_order_history">View Order History</string>
 </resources>
