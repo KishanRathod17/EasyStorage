@@ -3,11 +3,10 @@ package com.example.easystorage
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
+import org.w3c.dom.Text
 
 class StoreFurniture : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,8 +59,6 @@ class StoreFurniture : AppCompatActivity() {
         }
 
 
-
-
     }
 
     fun getPriceFromSelectedItem(selectedRoomSize: String): String {
@@ -84,7 +81,49 @@ class StoreFurniture : AppCompatActivity() {
 
     fun goToCalculateCost(v:View)
     {
-        val intent=Intent(this,CalculateCost::class.java)
-        startActivity(intent)
+        val number=findViewById<TextView>(R.id.enter)
+
+        if(number.text.toString().isEmpty())
+        {
+            Toast.makeText(this,"Please enter number of days and month properly",Toast.LENGTH_SHORT).show()
+        }
+        else {
+            //Creating intent
+            val intent = Intent(this, CalculateCost::class.java)
+
+
+            //Passing type of storage
+            intent.putExtra("type", "Furniture")
+
+
+            //Passing room size
+            val room_size = findViewById<Spinner>(R.id.room_spinner)
+            val selected_room_size = room_size.selectedItem.toString()
+            intent.putExtra("room_size", selected_room_size)
+
+
+            //Passing price
+            val room_price = findViewById<TextView>(R.id.room_price)
+            val selected_room_price = room_price.text.toString()
+            intent.putExtra("room_price", selected_room_price)
+
+
+            //Passing days or month
+            val day_or_month = findViewById<Spinner>(R.id.months_or_days)
+            val select_month_or_day = day_or_month.selectedItem.toString()
+            intent.putExtra("day_or_month", select_month_or_day)
+
+
+            //Passing number of days or month
+            val num_of_day_or_month = number.text.toString()
+            intent.putExtra("number_of_day_month", num_of_day_or_month)
+
+            startActivity(intent)
+        }
     }
+
+
+
+
 }
+

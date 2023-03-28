@@ -13,7 +13,6 @@ class CheckRegisteredInformation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_registered_information)
 
-
         val text_username = intent.getStringExtra("user_name")
         var p_name=findViewById<TextView>(R.id.previous_name)
         p_name.text=text_username
@@ -44,7 +43,7 @@ class CheckRegisteredInformation : AppCompatActivity() {
         Toast.makeText(this,"Please correct your mistakes",Toast.LENGTH_LONG).show()
         val intent= Intent(this,RegisterActivity::class.java)
 
-        //For sending data to agagin to register layout
+        //For sending data to again to register layout
         val in_username=findViewById<TextView>(R.id.previous_name)
         val text_username=in_username.text.toString()
         intent.putExtra("user_name",text_username)

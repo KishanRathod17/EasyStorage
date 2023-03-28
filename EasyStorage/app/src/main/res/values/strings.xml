@@ -69,6 +69,7 @@
 
 
     <!--Furniture Storage-->
+    <string name="furniture_storage">Furniture Storage</string>
     <string name="select_room_size">Select room size</string>
     <string name="room_size_price">Price : </string>
     <string name="select_time_period">Select time period</string>
@@ -76,9 +77,20 @@
 
 
     <!--Automobile Storage-->
+    <string name="automobile_storage">Automobile Storage</string>
     <string name="select_slot_size">Select slot size</string>
 
 
     <!--Document Storage-->
+    <string name="document_storage">Document Storage</string>
     <string name="select_locker_size">Select locker size</string>
+
+
+    <!--Calculate Cost-->
+    <string name="checkout">Checkout</string>
+    <string name="total_cost">Total Cost : </string>
+    <string name="cost_calculation">Cost calculation</string>
+
+    <!--Checkout-->
+    <string name="type_to_confirm">Please type \'CONFIRM\' to checkout</string>
 </resources>
