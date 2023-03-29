@@ -94,7 +94,7 @@
         android:layout_marginEnd="168dp"
         android:layout_marginBottom="426dp"
         android:foregroundGravity="center_horizontal"
-        android:onClick="checkLoginInfo"
+        android:onClick="loginUser"
         android:text="@string/login_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

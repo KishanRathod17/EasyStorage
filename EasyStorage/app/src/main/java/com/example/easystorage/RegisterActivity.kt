@@ -7,6 +7,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -35,17 +39,23 @@ class RegisterActivity : AppCompatActivity() {
 
     fun goToCheckInfo(v: View)
     {
-
         val in_username = findViewById<TextView>(R.id.input_username)
         val in_address = findViewById<TextView>(R.id.input_address)
         val in_email = findViewById<TextView>(R.id.input_email)
         val in_mobile = findViewById<TextView>(R.id.input_phone)
         val in_password = findViewById<TextView>(R.id.input_password)
-        if(in_username.text.isEmpty() or in_address.text.isEmpty() or in_email.text.isEmpty() or in_mobile.text.isEmpty() or in_password.text.isEmpty())
+
+        //Check if empty or not
+        if(in_username.text.isEmpty() or in_address.text.isEmpty() or in_email.text.isEmpty() or in_mobile.text.isEmpty())
         {
             Toast.makeText(this,"Please enter all information",Toast.LENGTH_SHORT).show()
         }
-        else {
+        else if( in_password.length() < 6)
+        {
+            Toast.makeText(this,"Password must of lenght more than 6",Toast.LENGTH_SHORT).show()
+        }
+        else
+        {
             Toast.makeText(this, "Is all information correct?", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, CheckRegisteredInformation::class.java)
 
@@ -62,8 +72,15 @@ class RegisterActivity : AppCompatActivity() {
             val text_usermobile = in_mobile.text.toString()
             intent.putExtra("user_mobile", text_usermobile)
 
+            val text_userpassword = in_password.text.toString()
+            intent.putExtra("user_password",text_userpassword)
+
             startActivity(intent)
         }
     }
+
+
+
+
 }
 

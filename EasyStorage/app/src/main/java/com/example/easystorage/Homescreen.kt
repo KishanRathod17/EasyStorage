@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class Homescreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,10 +14,12 @@ class Homescreen : AppCompatActivity() {
         setContentView(R.layout.activity_homescreen)
     }
 
-    fun goToMainPage(v: View)
+    fun logOut(v: View)
     {
-        Toast.makeText(this,"Going to Main Menu", Toast.LENGTH_SHORT).show()
+        val auth= Firebase.auth
+        auth.signOut()
         val intent= Intent(this,MainActivity::class.java)
+        Toast.makeText(this,"Logout successful",Toast.LENGTH_SHORT).show()
         startActivity(intent)
     }
 

@@ -167,21 +167,6 @@
         app:layout_constraintTop_toBottomOf="@+id/number"
         tools:ignore="TextContrastCheck" />
 
-    <EditText
-        android:id="@+id/input_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:hint="@string/hint_enter_password"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="@+id/password"
-        app:layout_constraintStart_toEndOf="@+id/password"
-        app:layout_constraintTop_toTopOf="@+id/password"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
-
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
@@ -195,5 +180,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="Enter password"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintStart_toEndOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

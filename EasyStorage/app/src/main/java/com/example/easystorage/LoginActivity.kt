@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,27 +17,37 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    fun checkLoginInfo(v: View)
+    fun loginUser(v:View)
     {
         val in_email = findViewById<TextView>(R.id.login_input_email)
         val in_password = findViewById<TextView>(R.id.login_input_password)
 
-        if(in_email.text.isEmpty() or in_password.text.isEmpty())
+        val intent=Intent(this,Homescreen::class.java)
+        val email=in_email.text.toString()
+        val password=in_password.text.toString()
+
+        if(email.isEmpty() or password.isEmpty())
         {
-            Toast.makeText(this,"Please enter all information correctly", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Incorrect Information",Toast.LENGTH_LONG).show()
         }
         else {
-            Toast.makeText(this, "You logged in successfully", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, Homescreen::class.java)
+            val auth = Firebase.auth
 
-//            val text_useremail = in_email.text.toString()
-//            intent.putExtra("user_email", text_useremail)
-//
-//            val text_usermobile = in_mobile.text.toString()
-//            intent.putExtra("user_mobile", text_usermobile)
-
-            startActivity(intent)
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful)
+                    {
+                        Toast.makeText(this, "Login Successful", Toast.LENGTH_LONG).show()
+                        val intent = Intent(this, Homescreen::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "Incorrect information", Toast.LENGTH_LONG).show()
+                    }
+                }
         }
-
     }
+
 }

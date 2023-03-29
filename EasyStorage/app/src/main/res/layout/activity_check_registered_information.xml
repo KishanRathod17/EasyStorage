@@ -53,6 +53,7 @@
         android:text="@string/user_name"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/easy_storage" />
 
@@ -65,6 +66,7 @@
         android:text="@string/user_address"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/head_name"
         app:layout_constraintTop_toBottomOf="@+id/previous_name" />
 
@@ -77,6 +79,7 @@
         android:text="@string/user_email"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/head_address"
         app:layout_constraintTop_toBottomOf="@+id/previous_address" />
 
@@ -99,6 +102,7 @@
         android:text="@string/user_number"
         android:textColor="@color/black"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/head_email"
         app:layout_constraintTop_toBottomOf="@+id/previous_email" />
 
@@ -116,7 +120,7 @@
         android:id="@+id/make_changes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:gravity="center|center_horizontal|center_vertical"
         android:onClick="goToRegisterPage"
         android:text="@string/makeChanges"
@@ -124,7 +128,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/previous_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/previous_password"
         tools:ignore="TextContrastCheck" />
 
     <Button
@@ -151,5 +155,28 @@
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/head_address"
         app:layout_constraintTop_toTopOf="@+id/head_address" />
+
+    <TextView
+        android:id="@+id/head_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/user_password"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/head_mobile"
+        app:layout_constraintTop_toBottomOf="@+id/head_mobile" />
+
+    <TextView
+        android:id="@+id/previous_password"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/head_password"
+        app:layout_constraintTop_toTopOf="@+id/head_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
