@@ -40,8 +40,8 @@ class RegisterActivity : AppCompatActivity() {
         val in_address = findViewById<TextView>(R.id.input_address)
         val in_email = findViewById<TextView>(R.id.input_email)
         val in_mobile = findViewById<TextView>(R.id.input_phone)
-
-        if(in_username.text.isEmpty() or in_address.text.isEmpty() or in_email.text.isEmpty() or in_mobile.text.isEmpty())
+        val in_password = findViewById<TextView>(R.id.input_password)
+        if(in_username.text.isEmpty() or in_address.text.isEmpty() or in_email.text.isEmpty() or in_mobile.text.isEmpty() or in_password.text.isEmpty())
         {
             Toast.makeText(this,"Please enter all information",Toast.LENGTH_SHORT).show()
         }
