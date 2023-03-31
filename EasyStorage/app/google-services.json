@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143318433355",
+    "project_id": "easystorage-41d78",
+    "storage_bucket": "easystorage-41d78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143318433355:android:e7eb18eeb5a8b52eb957ce",
+        "android_client_info": {
+          "package_name": "com.example.easystorage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143318433355-6jo3qfkfc06s9ohbo53rsnheihhfe646.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdAlS92kJ_PWbaVQYCX3YDGGrvqTIbPJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143318433355-6jo3qfkfc06s9ohbo53rsnheihhfe646.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
