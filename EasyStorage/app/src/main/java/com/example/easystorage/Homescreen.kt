@@ -35,6 +35,11 @@ class Homescreen : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun goToOrderHistory(v:View)
+    {
+        val intent=Intent(this,OrderHistory::class.java)
+        startActivity(intent)
+    }
     fun goToStoreFurniture(v: View)
     {
         val intent=Intent(this,StoreFurniture::class.java)

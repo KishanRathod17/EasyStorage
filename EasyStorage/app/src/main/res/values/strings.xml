@@ -93,4 +93,5 @@
 
     <!--Checkout-->
     <string name="type_to_confirm">Please type \'CONFIRM\' to checkout</string>
+
 </resources>

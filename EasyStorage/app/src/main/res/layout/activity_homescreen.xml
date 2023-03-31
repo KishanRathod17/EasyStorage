@@ -170,6 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="goToOrderHistory"
         android:text="@string/view_order_history"
         app:layout_constraintStart_toStartOf="@+id/order_history"
         app:layout_constraintTop_toBottomOf="@+id/order_history" />
