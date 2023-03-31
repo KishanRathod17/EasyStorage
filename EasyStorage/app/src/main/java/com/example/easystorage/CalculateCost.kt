@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.Spinner
 import android.widget.TextView
 
 class CalculateCost : AppCompatActivity() {
@@ -36,6 +38,33 @@ class CalculateCost : AppCompatActivity() {
             final_cost.text="₹"+calc.toString()
         }
 
+
+
+        //Going to CHECKOUT PAGE
+        val checkout=findViewById<Button>(R.id.checkout)
+        checkout.setOnClickListener {
+            val intent = Intent(this@CalculateCost, Checkout::class.java)
+
+            //Passing type of storage
+            intent.putExtra("type", type)
+
+            //Passing room size
+            intent.putExtra("room_size", room_size)
+
+            //Passing price
+            intent.putExtra("room_price", room_price)
+
+            //Passing days or month
+            intent.putExtra("day_or_month", day_or_month)
+
+            //Passing number of days or month
+            intent.putExtra("number_of_day_month", number_of_day_month)
+
+            //Passing total cost
+            intent.putExtra("total_cost",final_cost.text.toString())
+
+            startActivity(intent)
+        }
     }
 
     fun priceInt(str:String): Int
@@ -69,11 +98,6 @@ class CalculateCost : AppCompatActivity() {
 
     }
 
-    fun goToCheckout(v:View)
-    {
-        val intent=Intent(this,Checkout::class.java)
-        startActivity(intent)
-    }
 
 
 

@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import java.util.concurrent.Callable
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -39,6 +40,7 @@ class RegisterActivity : AppCompatActivity() {
 
     fun goToCheckInfo(v: View)
     {
+        val intent = Intent(this, CheckRegisteredInformation::class.java)
         val in_username = findViewById<TextView>(R.id.input_username)
         val in_address = findViewById<TextView>(R.id.input_address)
         val in_email = findViewById<TextView>(R.id.input_email)
@@ -56,31 +58,41 @@ class RegisterActivity : AppCompatActivity() {
         }
         else
         {
-            Toast.makeText(this, "Is all information correct?", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, CheckRegisteredInformation::class.java)
+            isGmailFormatValid(in_email.text.toString()){ flag->
+                if(flag)
+                {
+                    Toast.makeText(this, "Is all information correct?", Toast.LENGTH_SHORT).show()
 
-            //For sending data to another layout
-            val text_username = in_username.text.toString()
-            intent.putExtra("user_name", text_username)
+                    //For sending data to another layout
+                    val text_username = in_username.text.toString()
+                    intent.putExtra("user_name", text_username)
 
-            val text_useraddress = in_address.text.toString()
-            intent.putExtra("user_address", text_useraddress)
+                    val text_useraddress = in_address.text.toString()
+                    intent.putExtra("user_address", text_useraddress)
 
-            val text_useremail = in_email.text.toString()
-            intent.putExtra("user_email", text_useremail)
+                    val text_useremail = in_email.text.toString()
+                    intent.putExtra("user_email", text_useremail)
 
-            val text_usermobile = in_mobile.text.toString()
-            intent.putExtra("user_mobile", text_usermobile)
+                    val text_usermobile = in_mobile.text.toString()
+                    intent.putExtra("user_mobile", text_usermobile)
 
-            val text_userpassword = in_password.text.toString()
-            intent.putExtra("user_password",text_userpassword)
-
-            startActivity(intent)
+                    val text_userpassword = in_password.text.toString()
+                    intent.putExtra("user_password",text_userpassword)
+                    startActivity(intent)
+                }
+                else
+                {
+                    Toast.makeText(this,"Please enter correct gmail format",Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 
-
-
+    fun isGmailFormatValid(email: String,callback:(Boolean)->Unit)
+    {
+        val regex = "^[\\w.-]+@gmail.com$".toRegex()
+        callback(regex.matches(email))
+    }
 
 }
 

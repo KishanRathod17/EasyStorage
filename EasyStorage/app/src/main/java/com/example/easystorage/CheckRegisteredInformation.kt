@@ -58,12 +58,16 @@ class CheckRegisteredInformation : AppCompatActivity() {
         val text_userpassword=p_password.text.toString()
 
         //Registering the email and password
-        registerUser(text_useremail,text_userpassword)
+        registerUser(text_useremail,text_userpassword) { flag ->
+            if(flag)
+            {
+                //Storing the information of the user
+                storeUserInformation(text_username,text_useraddress,text_useremail,text_usermobile)
+                startActivity(intent)
+            }
+        }
 
-        //Storing the information of the user
-        storeUserInformation(text_username,text_useraddress,text_useremail,text_usermobile)
 
-        startActivity(intent)
     }
 
     fun goToRegisterPage(v: View)
@@ -89,24 +93,30 @@ class CheckRegisteredInformation : AppCompatActivity() {
         val text_usermobile=in_mobile.text.toString()
         intent.putExtra("user_mobile",text_usermobile)
 
-
         startActivity(intent)
     }
 
-    fun registerUser(email:String,password: String)
+    fun registerUser(email:String,password: String,callback:(Boolean)->Unit)
     {
+        var flag=false
+
         val auth= Firebase.auth
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {task ->
                 if(task.isSuccessful)
                 {
                     Toast.makeText(this,"User created successfully",Toast.LENGTH_LONG).show()
+                    callback(true)
                 }
                 else
                 {
-                    Toast.makeText(this,"Unsuccessful",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Unsuccessful user already registered",Toast.LENGTH_LONG).show()
+                    callback(false)
                 }
+
             }
+
+
     }
 
     fun storeUserInformation(reference_name:String,reference_address:String,reference_email:String,reference_mobile:String)
