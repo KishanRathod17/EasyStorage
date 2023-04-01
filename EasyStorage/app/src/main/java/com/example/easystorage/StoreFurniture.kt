@@ -87,6 +87,10 @@ class StoreFurniture : AppCompatActivity() {
         {
             Toast.makeText(this,"Please enter number of days and month properly",Toast.LENGTH_SHORT).show()
         }
+        else if(number.text.toString()=="0")
+        {
+            Toast.makeText(this,"Number of days or month should be greater than 0",Toast.LENGTH_SHORT).show()
+        }
         else {
             //Creating intent
             val intent = Intent(this, CalculateCost::class.java)
