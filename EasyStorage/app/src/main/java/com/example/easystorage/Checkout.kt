@@ -31,7 +31,6 @@ class Checkout : AppCompatActivity() {
             if(confirm.text.toString()=="CONFIRM")
             {
                 val intent= Intent(this,Homescreen::class.java)
-
                 storeUserInformation(type,room_size,room_price,day_or_month,number_of_day_month,total_cost)
                 Toast.makeText(this,"Congrats on creating an order",Toast.LENGTH_SHORT).show()
                 startActivity(intent)

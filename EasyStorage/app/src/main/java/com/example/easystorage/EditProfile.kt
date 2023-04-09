@@ -21,7 +21,6 @@ class EditProfile : AppCompatActivity() {
 
     fun makeProfileChanges(v: View)
     {
-        val intent = Intent(this, Homescreen::class.java)
         val in_username = findViewById<TextView>(R.id.input_username)
         val in_address = findViewById<TextView>(R.id.input_address)
         val in_mobile = findViewById<TextView>(R.id.input_phone)
@@ -65,7 +64,7 @@ class EditProfile : AppCompatActivity() {
 
 
 
-    fun ForgotPassword(view: View) {
+    fun ForgotPassword(v: View) {
 
         //Creating a alert box
         val builder = AlertDialog.Builder(this)
@@ -78,9 +77,12 @@ class EditProfile : AppCompatActivity() {
         builder.setPositiveButton("Send") { dialog, _ ->
             val email = input.text.toString()
 
-            if (email.isEmpty()) {
+            if (email.isEmpty())
+            {
                 Toast.makeText(this, "Please enter your email address", Toast.LENGTH_LONG).show()
-            } else {
+            }
+            else
+            {
                 val auth = Firebase.auth
 
                 //This will send the reset email

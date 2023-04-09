@@ -98,9 +98,9 @@ class CheckRegisteredInformation : AppCompatActivity() {
 
     fun registerUser(email:String,password: String,callback:(Boolean)->Unit)
     {
-        var flag=false
 
         val auth= Firebase.auth
+
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {task ->
                 if(task.isSuccessful)
@@ -132,7 +132,6 @@ class CheckRegisteredInformation : AppCompatActivity() {
             address = reference_address,
             email = reference_email,
             mobile = reference_mobile,
-            // password = reference_password
         )
         databaseReference.setValue(userInfo)
     }

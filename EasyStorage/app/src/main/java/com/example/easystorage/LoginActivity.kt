@@ -29,8 +29,6 @@ class LoginActivity : AppCompatActivity() {
 
         startActivity(intent)
 
-
-
     }
 
 
@@ -69,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
-    fun ForgotPassword(view: View) {
+    fun ForgotPassword(v: View) {
 
         //Creating a alert box
         val builder = AlertDialog.Builder(this)
@@ -82,7 +80,8 @@ class LoginActivity : AppCompatActivity() {
         builder.setPositiveButton("Send") { dialog, _ ->
             val email = input.text.toString()
 
-            if (email.isEmpty()) {
+            if (email.isEmpty())
+            {
                 Toast.makeText(this, "Please enter your email address", Toast.LENGTH_LONG).show()
             } else {
                 val auth = Firebase.auth
@@ -90,18 +89,13 @@ class LoginActivity : AppCompatActivity() {
                 //This will send the reset email
                 auth.sendPasswordResetEmail(email)
                     .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            Toast.makeText(
-                                this,
-                                "Email sent successfully $email",
-                                Toast.LENGTH_LONG
-                            ).show()
-                        } else {
-                            Toast.makeText(
-                                this,
-                                "Failed to send password reset email as ${task.exception?.message}",
-                                Toast.LENGTH_LONG
-                            ).show()
+                        if (task.isSuccessful)
+                        {
+                            Toast.makeText(this, "Email sent successfully $email", Toast.LENGTH_LONG).show()
+                        }
+                        else
+                        {
+                            Toast.makeText(this, "Failed to send password reset email as ${task.exception?.message}", Toast.LENGTH_LONG).show()
                         }
                     }
             }

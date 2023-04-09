@@ -14,6 +14,8 @@ class CalculateCost : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculate_cost)
 
+
+        //Getting the information from previous activity
         val type=intent.getStringExtra("type")
         val room_size=intent.getStringExtra("room_size")
         val room_price=intent.getStringExtra("room_price")
@@ -38,8 +40,6 @@ class CalculateCost : AppCompatActivity() {
             val calc= (priceToInt * numbDayMonthToInt) / 30
             final_cost.text="₹"+calc.toString()
         }
-
-
 
 
 
@@ -107,8 +107,6 @@ class CalculateCost : AppCompatActivity() {
     {
 
     }
-
-
 
 
 
