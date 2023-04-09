@@ -55,7 +55,7 @@
     <string name="makeChanges">Make Changes</string>
 
     <!--Login Activity-->
-    <string name="login_button">Log In</string>
+
     <string name="continue_without_login">Continue without login</string>
 
     <!--Homescreen-->

@@ -88,11 +88,8 @@ class StoreFurniture : AppCompatActivity() {
     {
         val number=findViewById<TextView>(R.id.enter)
 
-        if(!IsLoggedIn.getInstance().isLoggedIn)
-        {
-            Toast.makeText(this,"Please login",Toast.LENGTH_SHORT).show()
-        }
-        else if(number.text.toString().isEmpty())
+
+        if(number.text.toString().isEmpty())
         {
             Toast.makeText(this,"Please enter number of days and month properly",Toast.LENGTH_SHORT).show()
         }

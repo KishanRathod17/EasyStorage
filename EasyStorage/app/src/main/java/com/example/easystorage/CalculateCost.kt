@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 
 class CalculateCost : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,30 +41,39 @@ class CalculateCost : AppCompatActivity() {
 
 
 
+
+
         //Going to CHECKOUT PAGE
-        val checkout=findViewById<Button>(R.id.checkout)
+        val checkout = findViewById<Button>(R.id.checkout)
         checkout.setOnClickListener {
-            val intent = Intent(this@CalculateCost, Checkout::class.java)
 
-            //Passing type of storage
-            intent.putExtra("type", type)
+            if(!IsLoggedIn.getInstance().isLoggedIn)
+            {
+                Toast.makeText(this,"Please login", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                val intent = Intent(this@CalculateCost, Checkout::class.java)
 
-            //Passing room size
-            intent.putExtra("room_size", room_size)
+                //Passing type of storage
+                intent.putExtra("type", type)
 
-            //Passing price
-            intent.putExtra("room_price", room_price)
+                //Passing room size
+                intent.putExtra("room_size", room_size)
 
-            //Passing days or month
-            intent.putExtra("day_or_month", day_or_month)
+                //Passing price
+                intent.putExtra("room_price", room_price)
 
-            //Passing number of days or month
-            intent.putExtra("number_of_day_month", number_of_day_month)
+                //Passing days or month
+                intent.putExtra("day_or_month", day_or_month)
 
-            //Passing total cost
-            intent.putExtra("total_cost",final_cost.text.toString())
+                //Passing number of days or month
+                intent.putExtra("number_of_day_month", number_of_day_month)
 
-            startActivity(intent)
+                //Passing total cost
+                intent.putExtra("total_cost", final_cost.text.toString())
+
+                startActivity(intent)
+            }
         }
     }
 
