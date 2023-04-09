@@ -116,7 +116,6 @@ class CheckRegisteredInformation : AppCompatActivity() {
 
             }
 
-
     }
 
     fun storeUserInformation(reference_name:String,reference_address:String,reference_email:String,reference_mobile:String)

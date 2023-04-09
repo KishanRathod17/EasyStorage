@@ -18,5 +18,4 @@ class IsLoggedIn private constructor(){
 
     var isLoggedIn:Boolean=false
 
-
 }

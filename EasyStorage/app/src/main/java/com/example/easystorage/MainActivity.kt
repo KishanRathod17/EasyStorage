@@ -12,7 +12,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()
+{
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     fun openActivityKnowAboutEasyStorage(v:View)
     {
         Toast.makeText(this,"You'll get to know about EasyStorage",Toast.LENGTH_SHORT).show()
+
         val intent=Intent(this,KnowAboutEasyStorage::class.java)
         startActivity(intent)
     }

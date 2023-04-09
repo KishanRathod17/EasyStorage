@@ -16,7 +16,8 @@ import java.util.concurrent.Callable
 class RegisterActivity : AppCompatActivity() {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
@@ -41,6 +42,8 @@ class RegisterActivity : AppCompatActivity() {
     fun goToCheckInfo(v: View)
     {
         val intent = Intent(this, CheckRegisteredInformation::class.java)
+
+        //Getting the user inputted values
         val in_username = findViewById<TextView>(R.id.input_username)
         val in_address = findViewById<TextView>(R.id.input_address)
         val in_email = findViewById<TextView>(R.id.input_email)
@@ -82,6 +85,7 @@ class RegisterActivity : AppCompatActivity() {
 
                     val text_userpassword = in_password.text.toString()
                     intent.putExtra("user_password",text_userpassword)
+
                     startActivity(intent)
                 }
                 else
