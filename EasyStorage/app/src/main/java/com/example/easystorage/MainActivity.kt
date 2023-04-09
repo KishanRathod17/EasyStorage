@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        if(IsLoggedIn.getInstance().isLoggedIn) {
+            val auth = Firebase.auth
+            auth.signOut()
+        }
     }
 
     fun openActivityKnowAboutEasyStorage(v: View)

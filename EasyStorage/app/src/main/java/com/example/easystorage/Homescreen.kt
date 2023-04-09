@@ -82,4 +82,17 @@ class Homescreen : AppCompatActivity() {
     }
 
 
+    fun goToEditProfile(v:View)
+    {
+        if(IsLoggedIn.getInstance().isLoggedIn)
+        {
+            val intent= Intent(this,EditProfile::class.java)
+            startActivity(intent)
+        }
+        else
+        {
+            Toast.makeText(this,"Please login",Toast.LENGTH_SHORT).show()
+        }
+    }
+
 }

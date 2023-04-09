@@ -52,6 +52,10 @@ class RegisterActivity : AppCompatActivity() {
         {
             Toast.makeText(this,"Please enter all information",Toast.LENGTH_SHORT).show()
         }
+        else if( in_mobile.text.length != 10)
+        {
+            Toast.makeText(this,"Mobile number should be of 10 digits",Toast.LENGTH_SHORT).show()
+        }
         else if( in_password.length() < 6)
         {
             Toast.makeText(this,"Password must of lenght more than 6",Toast.LENGTH_SHORT).show()

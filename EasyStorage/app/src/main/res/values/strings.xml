@@ -55,7 +55,7 @@
     <string name="makeChanges">Make Changes</string>
 
     <!--Login Activity-->
-
+    <string name="forgot_password">Forgot password?</string>
     <string name="continue_without_login">Continue without login</string>
 
     <!--Homescreen-->
@@ -67,7 +67,6 @@
     <string name="logout">Log Out</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="view_order_history">View Order History</string>
-
 
 
     <!--Furniture Storage-->

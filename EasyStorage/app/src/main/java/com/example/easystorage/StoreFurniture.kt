@@ -17,8 +17,6 @@ class StoreFurniture : AppCompatActivity() {
         setContentView(R.layout.activity_store_furniture)
 
 
-
-
         //FIRST SPINNER FOR ROOM SIZE
         val roomSizes= arrayOf("2m x 2m","4m x 4m","8m x 8m")      //Sizes of room array to store in spinner
         val roomListView=findViewById<Spinner>(R.id.room_spinner)
