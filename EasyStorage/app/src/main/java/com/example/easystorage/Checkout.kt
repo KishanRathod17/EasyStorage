@@ -61,7 +61,7 @@ class Checkout : AppCompatActivity() {
         //Store transcation id under user id
         val userTransactionReference=databaseReference.child("Transaction Information").child(reference_uid).child(transactionId!!)
 
-        val transInfo = TranscationInformation(
+        val transInfo = TransactionInformation(
             uid=reference_uid,
             tid=transactionId,
             typeOfStorage=type,

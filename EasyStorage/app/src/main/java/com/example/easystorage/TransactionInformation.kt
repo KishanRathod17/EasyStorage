@@ -1,6 +1,6 @@
 package com.example.easystorage
 
-data class TranscationInformation(
+data class TransactionInformation(
     val uid:String?= "",
     val tid:String?="",
     val typeOfStorage:String?="",

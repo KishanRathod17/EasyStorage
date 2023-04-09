@@ -5,14 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import com.google.android.gms.common.data.DataBufferObserverSet
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.Transaction
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.ktx.Firebase
 
 class OrderHistory : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +37,7 @@ class OrderHistory : AppCompatActivity() {
                 for(transactionSpanshot in snapshot.children)
                 {
                     val transactionID = transactionSpanshot.key.toString()
-                    val Transaction = transactionSpanshot.getValue(TranscationInformation::class.java)
+                    val Transaction = transactionSpanshot.getValue(TransactionInformation::class.java)
 
                     val order_info="Transcation ID :  $transactionID \n" +
                             " Type Of Storage : ${Transaction?.typeOfStorage}\n" +
