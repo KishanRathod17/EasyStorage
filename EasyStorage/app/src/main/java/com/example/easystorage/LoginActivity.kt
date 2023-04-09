@@ -16,13 +16,25 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
     }
 
+    fun continueWithoutLogin(v:View)
+    {
+        val intent=Intent(this,Homescreen::class.java)
 
+        val auth= Firebase.auth
+        auth.signOut()
+
+        IsLoggedIn.getInstance().isLoggedIn=false
+
+        startActivity(intent)
+
+
+
+    }
     fun loginUser(v:View)
     {
         val in_email = findViewById<TextView>(R.id.login_input_email)
         val in_password = findViewById<TextView>(R.id.login_input_password)
 
-        val intent=Intent(this,Homescreen::class.java)
         val email=in_email.text.toString()
         val password=in_password.text.toString()
 
@@ -37,6 +49,8 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful)
                     {
+                        IsLoggedIn.getInstance().isLoggedIn=true
+
                         Toast.makeText(this, "Login Successful", Toast.LENGTH_LONG).show()
                         val intent = Intent(this, Homescreen::class.java)
                         startActivity(intent)

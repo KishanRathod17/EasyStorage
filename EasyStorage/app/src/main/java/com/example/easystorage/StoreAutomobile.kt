@@ -7,7 +7,11 @@ import android.view.View
 import android.widget.*
 
 class StoreAutomobile : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+
+
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_store_automobile)
 
@@ -82,7 +86,11 @@ class StoreAutomobile : AppCompatActivity() {
     {
         val number=findViewById<TextView>(R.id.enter)
 
-        if(number.text.toString().isEmpty())
+        if(!IsLoggedIn.getInstance().isLoggedIn)
+        {
+            Toast.makeText(this,"Please login",Toast.LENGTH_SHORT).show()
+        }
+        else if(number.text.toString().isEmpty())
         {
             Toast.makeText(this,"Please enter number of days and month properly", Toast.LENGTH_SHORT).show()
         }

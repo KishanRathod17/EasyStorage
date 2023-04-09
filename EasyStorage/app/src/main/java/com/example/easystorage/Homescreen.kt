@@ -9,9 +9,13 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class Homescreen : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_homescreen)
+
     }
 
     fun logOut(v: View)
@@ -35,15 +39,25 @@ class Homescreen : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun goToOrderHistory(v:View)
-    {
-        val intent=Intent(this,OrderHistory::class.java)
-        startActivity(intent)
-    }
     fun goToStoreFurniture(v: View)
     {
         val intent=Intent(this,StoreFurniture::class.java)
         startActivity(intent)
     }
+
+    fun goToOrderHistory(v:View)
+    {
+        if(IsLoggedIn.getInstance().isLoggedIn)
+        {
+            val intent = Intent(this, OrderHistory::class.java)
+            startActivity(intent)
+
+        }
+        else
+        {
+            Toast.makeText(this,"Please login",Toast.LENGTH_SHORT).show()
+        }
+    }
+
 
 }
