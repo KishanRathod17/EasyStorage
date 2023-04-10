@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper"
-    tools:context=".KnowAboutEasyStorage" >
+    tools:context=".KnowAboutEasyStorage">
+
 
     <TextView
         android:id="@+id/easy_storage"
@@ -30,6 +31,7 @@
         app:layout_constraintEnd_toStartOf="@+id/easy_storage"
         app:srcCompat="@drawable/logo" />
 
+
     <TextView
         android:id="@+id/WhatIsEasyStorage"
         android:layout_width="wrap_content"
@@ -39,32 +41,11 @@
         android:text="@string/what_easy_storage"
         android:textColor="#0B0B0B"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/easy_storage" />
-
-    <ScrollView
-            android:id="@+id/scroll1"
-            android:layout_width="match_parent"
-            android:layout_height="240dp"
-            app:layout_constraintStart_toStartOf="@+id/WhatIsEasyStorage"
-            app:layout_constraintTop_toBottomOf="@+id/WhatIsEasyStorage">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/WhatAnswer"
-                android:layout_width="386dp"
-                android:layout_height="218dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:paddingLeft="20dp"
-                android:text="@string/what_easy_storage_answer"
-                android:textColor="#0B0B0B"
-                android:textSize="15sp" />
-        </LinearLayout>
-    </ScrollView>
 
 
     <TextView
@@ -72,16 +53,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="293dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/services"
         android:textColor="#0B0B0B"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scroll1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/Furniture"
@@ -118,32 +100,30 @@
 
     <TextView
         android:id="@+id/furniture_info"
-        android:layout_width="377dp"
-        android:layout_height="37dp"
+        android:layout_width="338dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/furniture_info"
         android:textColor="#0B0B0B"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/furniture"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Furniture" />
 
     <TextView
         android:id="@+id/document_info"
-        android:layout_width="366dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="36dp"
+        android:layout_width="333dp"
+        android:layout_height="0dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/document_info"
         android:textColor="#0B0B0B"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/document"
         app:layout_constraintTop_toBottomOf="@+id/Documents" />
 
     <TextView
         android:id="@+id/automobile_info"
-        android:layout_width="381dp"
+        android:layout_width="345dp"
         android:layout_height="43dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/automobile_info"
@@ -165,7 +145,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/services"
         app:srcCompat="@drawable/color_furniture" />
@@ -194,14 +174,28 @@
         android:id="@+id/howitworks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:onClick="openActivityHowItWorks"
         android:text="@string/how_it_works"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="0.418"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/automobile_info" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-medium"
+        android:foregroundGravity="center_horizontal"
+        android:text="@string/what_easy_storage_answer"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WhatIsEasyStorage" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
